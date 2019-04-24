@@ -1,5 +1,5 @@
 # DCH
-PyTorch implementation for DCH: [Deep Cauchy Hashing for Hamming Space Retrieval](http://ise.thss.tsinghua.edu.cn/~mlong/doc/deep-cauchy-hashing-cvpr18.pdf), Yue Cao, Mingsheng Long, Bin Liu, Jianmin Wang, IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018
+CV Project ：PyTorch implementation for DCH: [Deep Cauchy Hashing for Hamming Space Retrieval](http://ise.thss.tsinghua.edu.cn/~mlong/doc/deep-cauchy-hashing-cvpr18.pdf), Yue Cao, Mingsheng Long, Bin Liu, Jianmin Wang, IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018
 
 ## Prerequisites
 Linux or OSX
@@ -9,8 +9,8 @@ NVIDIA GPU + CUDA (may CuDNN) and corresponding PyTorch framework (version 0.3.1
 Python 2.7/3.5
 
 ## Datasets
-We use ImageNet, NUS-WIDE and COCO dataset in our experiments. You can download the ImageNet dataset and NUS-WIDE dataset [here](https://drive.google.com/drive/folders/0B7IzDz-4yH_HOXdoaDU4dk40RFE?usp=sharing).
-As for COCO dataset, we use COCO 2014, which can be downloaded [here](http://mscoco.org/dataset/#download).
+You can download the ImageNet dataset and NUS-WIDE dataset [here](https://drive.google.com/drive/folders/0B7IzDz-4yH_HOXdoaDU4dk40RFE?usp=sharing).
+As for COCO dataset, you can downloaded [here](http://mscoco.org/dataset/#download).
 Each line in the list file follows the following format:
 ```
 <image path><space><one hot label representation>
