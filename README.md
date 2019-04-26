@@ -1,5 +1,5 @@
 # DCH
-CV Project ：PyTorch implementation for DCH: [Deep Cauchy Hashing for Hamming Space Retrieval](http://ise.thss.tsinghua.edu.cn/~mlong/doc/deep-cauchy-hashing-cvpr18.pdf), Yue Cao, Mingsheng Long, Bin Liu, Jianmin Wang, IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018
+Class Project ：PyTorch implementation for DCH: [Deep Cauchy Hashing for Hamming Space Retrieval](http://ise.thss.tsinghua.edu.cn/~mlong/doc/deep-cauchy-hashing-cvpr18.pdf), Yue Cao, Mingsheng Long, Bin Liu, Jianmin Wang, IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2018
 
 ## Prerequisites
 Linux or OSX
@@ -21,7 +21,7 @@ First, you can manually download the PyTorch pre-trained model introduced in `to
 Then, you can train the model for each dataset using the followling command.
 ```
 cd src
-python train.py --gpu_id 0 --dataset coco --prefix resnet50_hashnet --hash_bit 48 --net ResNet50 --lr 0.0003 --class_num 1.0
+python train.py --gpu_id 0 --dataset coco --prefix AlexNet_hashnet --hash_bit 48 --net AlexNet --lr 0.0003 --q_lambda 1.0 
 ```
 ## Evaluation
 You can evaluate the Mean Average Precision(MAP) result on each dataset using the following command.
