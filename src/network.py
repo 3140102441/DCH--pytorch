@@ -35,9 +35,7 @@ class AlexNetFc(nn.Module):
     x = x.view(x.size(0), 256*6*6)
     x = self.classifier(x)
     y = self.hash_layer(x)
-    if self.iter_num % self.step_size==0:
-        self.scale = self.init_scale * (math.pow((1.+self.gamma*self.iter_num), self.power))
-    y = self.activation(self.scale*y)
+    y = self.activation(y)
     return y
 
   def output_num(self):
@@ -78,9 +76,7 @@ class ResNetFc(nn.Module):
     x = self.feature_layers(x)
     x = x.view(x.size(0), -1)
     y = self.hash_layer(x)
-    if self.iter_num % self.step_size==0:
-        self.scale = self.init_scale * (math.pow((1.+self.gamma*self.iter_num), self.power))
-    y = self.activation(self.scale*y)
+    y = self.activation(y)
     return y
 
   def output_num(self):
@@ -116,9 +112,7 @@ class VGGFc(nn.Module):
     x = x.view(x.size(0), 25088)
     x = self.classifier(x)
     y = self.hash_layer(x)
-    if self.iter_num % self.step_size==0:
-        self.scale = self.init_scale * (math.pow((1.+self.gamma*self.iter_num), self.power))
-    y = self.activation(self.scale*y)
+    y = self.activation(y)
     return y
 
   def output_num(self):
