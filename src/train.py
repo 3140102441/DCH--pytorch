@@ -107,7 +107,7 @@ def train(config):
                                  q_lambda=config["loss"]["q_lambda"])
         total_loss_value = total_loss_value + similarity_loss.float().data[0]
         similarity_loss.backward()
-        if i % len_train1 == 0:
+        if (i+1) % len_train1 == 0:
             print("Epoch: {:05d}, loss: {:.3f}".format(i//len_train1, total_loss_value))
             total_loss_value = 0.0 
         optimizer.step()
@@ -151,7 +151,7 @@ if __name__ == "__main__":
     config["prep"] = {"test_10crop":True, "resize_size":256, "crop_size":224}
     config["optimizer"] = {"type":"SGD", "optim_params":{"lr":1.0, "momentum":0.9, \
                            "weight_decay":0.0005, "nesterov":True}, "lr_type":"step", \
-                           "lr_param":{"init_lr":args.lr, "gamma":0.5, "step":2000} }
+                           "lr_param":{"init_lr":args.lr, "gamma":0.5, "step":3000} }
 
     config["loss"] = {"gamma":15.0, "normed":True, "q_lambda":args.q_lambda}
 

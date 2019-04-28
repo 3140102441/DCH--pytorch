@@ -21,7 +21,7 @@ class AlexNetFc(nn.Module):
     self.hash_layer.bias.data.fill_(0.0)
     self.iter_num = 0
     self.__in_features = hash_bit
-    self.step_size = 200
+    self.step_size = 300
     self.gamma = 0.005
     self.power = 0.5
     self.init_scale = 1.0
@@ -63,7 +63,7 @@ class ResNetFc(nn.Module):
     self.hash_layer.bias.data.fill_(0.0)
     self.iter_num = 0
     self.__in_features = hash_bit
-    self.step_size = 200
+    self.step_size = 300
     self.gamma = 0.005
     self.power = 0.5
     self.init_scale = 1.0
@@ -98,7 +98,7 @@ class VGGFc(nn.Module):
     self.hash_layer.bias.data.fill_(0.0)
     self.iter_num = 0
     self.__in_features = hash_bit
-    self.step_size = 200
+    self.step_size = 300
     self.gamma = 0.005
     self.power = 0.5
     self.init_scale = 1.0
